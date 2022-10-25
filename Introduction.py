@@ -105,8 +105,8 @@ elif option=="Simulation Dataset Background":
     st.markdown(
            """
            Mobility of the fractured segments is often beneficial, but it results in substantial loading of the applied fixation device, which may cause stability, strength, or durability related issues.    
-           - Structural analysis is employed to assess bone and fixator deformations, stresses, and strains, which are related to the fixator durability.
-           - For a known fixator configuration and position relative to the bone, structural analysis of bone-fixator systems is performed using the Finite Element Method (FEM).
+           - To assess bone and fixator deformations, stresses, and strains, which are related to the fixator durability, structural analysis is performed.
+           - The Structural analysis of bone-fixator systems is performed using the Finite Element Analysis (FEA).
            """
            )
     

@@ -102,14 +102,13 @@ elif option=="Simulation Dataset Background":
     
     st.title("Why Simulation is Needed?")
     st.markdown("<hr/>", unsafe_allow_html=True)
-    st.markdown(
-            """
-            Mobility of the fractured segments is often beneficial for the formation of a callus, but it results in substantial loading of the applied fixation device, which may cause stability, strength, or durability related issues.    
-            - Structural analysis is employed to assess bone and fixator deformations, stresses, and strains, which are related to the fixator durability.
-            - For a known fixator configuration and position relative to the bone, structural analysis of bone-fixator systems is performed using the Finite Element Method (FEM).
-            - Using simulation data, an optimization study can be employed to find the optimum shape and dimensions of an existing fixation device. 
-            """
-            )
+   st.markdown(
+           """
+           Mobility of the fractured segments is often beneficial, but it results in substantial loading of the applied fixation device, which may cause stability, strength, or durability related issues.    
+           - Structural analysis is employed to assess bone and fixator deformations, stresses, and strains, which are related to the fixator durability.
+           - For a known fixator configuration and position relative to the bone, structural analysis of bone-fixator systems is performed using the Finite Element Method (FEM).
+           """
+           )
     
     
     fig_col1, fig_col2, fig_col3  = st.columns([6,1,6])  

@@ -102,7 +102,7 @@ elif option=="Simulation Dataset Background":
     
     st.title("Why Simulation is Needed?")
     st.markdown("<hr/>", unsafe_allow_html=True)
-   st.markdown(
+    st.markdown(
            """
            Mobility of the fractured segments is often beneficial, but it results in substantial loading of the applied fixation device, which may cause stability, strength, or durability related issues.    
            - Structural analysis is employed to assess bone and fixator deformations, stresses, and strains, which are related to the fixator durability.

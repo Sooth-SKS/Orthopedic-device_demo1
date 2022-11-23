@@ -64,7 +64,7 @@ with st.sidebar.container():
     image = Image.open('Soosthsayer_logo.png')
     st.image(image, use_column_width=True)
 
-option = st.sidebar.selectbox('',('Introduction', 'Product Background', 'Simulation Dataset Background', 'Training and Validation','Performance Prediction'))
+option = st.sidebar.selectbox('',('Introduction', 'Product Background', 'Simulation Dataset Background', 'Training and Validation','Performance Prediction','Response Surface'))
 #st.sidebar.write('You selected:', option)   
 
 if option=="Introduction":
@@ -356,3 +356,47 @@ elif option=="Performance Prediction":
         fig.update_layout(autosize=False,width=350, height=400)
         st.write(fig)
         
+        
+elif option=="Response Surface":
+    
+    st.title("Comparison with traditional Optimization")
+    st.write("Number of design points for full-factorial experiment = 15,625")
+    st.write("Number of design points with Cental Composite Design (CCD) = 77")
+    st.write("Number of design points in the current dataset = 89")
+    st.write("Thus, the current dataset closely resembles DOE sampling strategy")
+    st.write("Traditional optimization tecchniques use linear and quadratic based model for repsonse surface generation")
+    
+    st.markdown("<hr/>", unsafe_allow_html=True)
+        
+    with st.expander("Modeling Error (Traditional vs ML)"):    
+        fig_col1, fig_col2 = st.columns(2)
+        with fig_col1:
+            image = Image.open('bar_RMSE.jpg')
+            st.image(image, width=400,caption='RMSE')
+        
+        with fig_col2:
+            image = Image.open('bar_R2.jpg')
+            st.image(image, width=400,caption='R-squared')
+        st.write("ML model clearly outperforms the other two traditional models - linear and quadratic.")
+        st.write("The training error is low in quadratic model, but the test error is higher due to overfit issue.")
+    
+    st.markdown("<hr/>", unsafe_allow_html=True)  
+    
+    with st.expander("Response Surface (Traditional vs ML): Equivalent Stress Distribution"):
+    
+        fig_col1, fig_col2, fig_col3 = st.columns(3)
+    
+        with fig_col1:
+            image = Image.open('linear.jpg')
+            st.image(image, width=300,caption='Linear model')
+        
+        with fig_col2:
+            image = Image.open('quad.jpg')
+            st.image(image, width=300,caption='Quadratic model')
+        
+        with fig_col3:
+            image = Image.open('ML.jpg')
+            st.image(image, width=300,caption='ML model') 
+        st.write("Machine Learning model is able to predict the non-linear decison boundaries")
+        
+    
